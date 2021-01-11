@@ -1,23 +1,14 @@
-import logo from './logo.svg';
+
 import './App.css';
+
+import UserProfile from './components/user-profile.component';
+import UserList from './components/user-list.component';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <UserList dataSource='https://jsonplaceholder.typicode.com/users' />
+      <UserProfile name='UserTest' email='test@email.com' dataSource='https://jsonplaceholder.typicode.com/posts' />
     </div>
   );
 }
